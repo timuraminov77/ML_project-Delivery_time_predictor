@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Time Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+	<div class="img"></div>
+	<form class="form">
+		<h1>Delivery time prediction</h1>
+		<h2>Distance (km)</h2>
+		<input class="distance"  type="text" id="distanceKM" class="floatLabel" name="Distance" value="5">
+		<div>
+			<h2>Traffic level</h2>
+			<select class="traffic" name="" id="Traffic">
+				<option value="" disabled="disabled" selected="selected">Choose traffic level</option>
+				<option>low</option>
+				<option>medium</option>
+				<option>high</option>
+			</select>
+		</div>
+		<h2>Courier experience (years)</h2>
+		<div class="switch-field">
+			<input type="radio" id="radio-CEY-1" name="CEY" value="1"/>
+			<label for="radio-CEY-1">1</label>
+			<input type="radio" id="radio-CEY-2" name="CEY" value="2"/>
+			<label for="radio-CEY-2">2</label>
+			<input type="radio" id="radio-CEY-3" name="CEY" value="3"/>
+			<label for="radio-CEY-3">3</label>
+			<input type="radio" id="radio-CEY-4" name="CEY" value="4"/>
+			<label for="radio-CEY-4">4</label>
+			<input type="radio" id="radio-CEY-5" name="CEY" value="5" checked/>
+			<label for="radio-CEY-5">5</label>
+			<input type="radio" id="radio-CEY-6" name="CEY" value="6"/>
+			<label for="radio-CEY-6">6</label>
+			<input type="radio" id="radio-CEY-7" name="CEY" value="7"/>
+			<label for="radio-CEY-7">7</label>
+			<input type="radio" id="radio-CEY-8" name="CEY" value="8"/>
+			<label for="radio-CEY-8">8</label>
+			<input type="radio" id="radio-CEY-9" name="CEY" value="9"/>
+			<label for="radio-CEY-9">9</label>
+			<input type="radio" id="radio-CEY-10" name="CEY" value="10"/>
+			<label for="radio-CEY-10">10</label>
+		</div>
+		<div>
+			<h2>Weather</h2>
+			<select class="weather" name="" id="Weather">
+				<option value="" disabled="disabled" selected="selected">Choose weather</option>
+				<option>Clear</option>
+				<option>Foggy</option>
+			</select>
+		</div>
+		
+		<button class="submit" onclick="onClickedEstimateTime()" type="button">Estimate Time</button>
+		<div id="EstimatedTime" class="result">	<h2></h2> </div>
+	</form>
+</body>
+</html>
